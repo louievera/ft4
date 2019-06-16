@@ -1,0 +1,154 @@
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+html, body {
+     background-color: #000000;
+     color: #636b6f;
+     /*
+     font-family: 'Raleway', sans-serif;
+     font-weight: 100;
+     height: 100vh;
+     margin: 0;
+     */
+}
+
+body {
+    font-family: "RC";
+    src: url("/fonts/MicroExtendFLF.ttf");
+    background-image: url("/images/bg_body.jpg");
+    background-color: #000000;
+    color: #ffffff;
+}
+
+@font-face {
+   font-family: "RC";
+   src: url("/fonts/MicroExtendFLF.ttf");
+   font-weight: 400;
+}
+
+a {
+    color: #ffffff;
+}
+
+a:hover {
+    color: #f5f104;
+}
+
+.card-body{
+  background-color: #2b2020;
+}
+
+.card-title, .card-text {
+  background-color: #000000;
+  padding: 0.5rem;
+}
+
+.card-header {
+    background-color: #9A1010;
+}
+/*
+.card > .list-group:first-child .list-group-item:first-child {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-radius: 0rem;
+}
+
+.card > .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+*/
+.navbar{
+   background-image: url("/images/bg_nav.jpg");
+   src: url("/fonts/MicroExtendFLF.ttf");
+   font-family: "RC";
+   font-weight: 400;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: #ff0000;
+}
+
+.footer{
+    background-image: url("/images/bg_nav.jpg");
+    /* height:30px; */
+}
+
+.links > a {
+    color: #ffffff;
+}
+
+.btn-link {
+    color: #9A1010;
+}
+
+.list-group-item-dark {
+  color: #ffffff;
+  background-color: #880000;
+  border-color: #ffffff;
+  /*
+  background-color: #ae4a4a;
+  */
+}
+
+.list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
+  color: #000000;
+  background-color: #f4d03f;
+}
+
+.list-group-item-dark.list-group-item-action.active {
+  color: #fff;
+  background-color: #000000;
+  border-color: ##ff0000;
+}
+
+.page-link {
+    color: #000000;
+    /*
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    */
+}
+
+.page-item.active .page-link {
+    background-color: #880000;
+    border-color: #880000;
+}
+
+/* For custom modal Alert
+
+.card, .card-img {
+  border-top-left-radius: 0 rem;
+  border-top-right-radius: 0rem;
+  border-radius: 0rem;
+}
+
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+
+.modal-body {
+  background-color: #ff0000;
+}
+
+.modal-header {
+  background-color: #ff0000;
+}
+
+*/
