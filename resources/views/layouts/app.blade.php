@@ -40,9 +40,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('welcome') }}"><strong>Home</strong></a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="/promos"><strong>Promos</strong></a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="/videos"><strong>Videos</strong></a>
               </li>
@@ -52,9 +52,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('lyric_browse') }}"><strong>Lyrics</strong></a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('artists') }}"><strong>Artists</strong></a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('tryouts') }}"><strong>Tryouts</strong></a>
               </li>
