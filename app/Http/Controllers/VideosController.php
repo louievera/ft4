@@ -4,13 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Video;
+use input;
 
 class VideosController extends Controller
 {
     public function index(){
-        $videos = Video::orderBy('updated_at','desc')
+        $search = request()->search != null ? request()->search : "";
+        
+        if($search){
+            $videos=Video::where("title","like","%".$search."%")
+                            ->orderBy('updated_at','desc')
+                            ->paginate(15);
+        }
+        else{
+            $videos = Video::orderBy('updated_at','desc')
                     ->paginate(15);
-
+        }
+        
         return json_encode($videos);
     }
 
