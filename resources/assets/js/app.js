@@ -16,6 +16,11 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('carousel', require('./components/WelcomeComponent.vue'));
+Vue.component('postvid', require('./components/WelcomeVidPostComponent.vue'));
+Vue.component('videos', require('./components/VideoListComponent.vue'));
+
+
 
 const app = new Vue({
     el: '#app'

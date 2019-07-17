@@ -21,3 +21,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 */
+
+
+Route::get('/welcomeposts','Welcomepage@getPosts');
+Route::get('/welcomevids','Welcomepage@getVids');
+
+Route::get('/videos','VideosController@index');
+Route::get('/articles','ArticlesController@index');
+
+

@@ -11,13 +11,13 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function getIndex() {
+    // public function getIndex() {
         //$posts = Post::all();
-        $posts = Post::where('featured',1)->orderBy('updated_at','desc')->get();
-        $videos = Video::where('featured',1)->orderBy('updated_at','desc')->get();
-        return view('welcome')->with('posts',$posts)->with('videos',$videos);
+        // $posts = Post::where('featured',1)->orderBy('updated_at','desc')->get();
+        // $videos = Video::where('featured',1)->orderBy('updated_at','desc')->get();
+        // return view('welcome');
         //return view('welcome')->with('posts',$posts);
-    }
+    // }
 
     public function indexPost()
     {

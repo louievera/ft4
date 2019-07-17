@@ -22,7 +22,12 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/', 'PageController@getIndex')->name('welcome');
+// Route::get('/', 'PageController@getIndex')->name('welcome');
+
+Route::get('/', function(){ 
+    return view('welcome');
+})->name('welcome');
+
 Route::get('/articles','PageController@indexPost')->name('article_browse');
 Route::get('/article/{slug}','PageController@showPost')->name('article_read');
 Route::get('/videos','PageController@indexVideo')->name('video_browse');
@@ -32,20 +37,11 @@ Route::get('/lyric/{slug}','PageController@showLyric')->name('lyric_read');
 
 Route::get('/{slug}','PageController@showPage')->name('page_read');
 
-/*
-Route::get('/promos', 'PageController@getPromos')->name('promos');
-Route::view('/fliptop_radio_station1', 'pages.ftradio1')->name('radio1');
-Route::view('/fliptop_radio_station2', 'pages.ftradio2')->name('radio2');
-Route::view('/fliptop_radio_station3', 'pages.ftradio3')->name('radio3');
-*/
-
 Route::view('/terms', 'pages.terms')->name('terms');
 Route::view('/privacy', 'pages.privacy')->name('privacy');
 Route::view('/wip', 'pages.wip')->name('wip');
 
 
-// Temporary Stuff
-//Route::view('videos', 'tempo.videos_static');
 Route::view('/artists', 'tempo.artists_static')->name('artists');
 Route::view('/library', 'tempo.articles_static')->name('library');
 Route::view('/tryouts', 'tempo.tryouts_static')->name('tryouts');
