@@ -14,11 +14,11 @@ class VideosController extends Controller
         if($search){
             $videos=Video::where("title","like","%".$search."%")
                             ->orderBy('updated_at','desc')
-                            ->paginate(15);
+                            ->paginate(9);
         }
         else{
             $videos = Video::orderBy('updated_at','desc')
-                    ->paginate(15);
+                    ->paginate(9);
         }
         
         return json_encode($videos);

@@ -7,7 +7,7 @@
 
 @section('content')
 
-  <div class="row">
+  <!-- <div class="row">
       <div class="col-md-1">
       </div>
       <div class="col-md-10">
@@ -37,8 +37,8 @@
         <p class="bg-dark text-center">{{ $videos->links() }}</p>
 
       </div>
-  </div>
-
+  </div> -->
+  <videos></videos>
 
 
 
