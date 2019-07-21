@@ -49613,7 +49613,7 @@ var render = function() {
                 attrs: { src: "/storage/" + post.image }
               }),
               _vm._v(" "),
-              _c("a", { attrs: { href: "post.slug" } }, [
+              _c("a", { attrs: { href: post.slug } }, [
                 _c(
                   "div",
                   { staticClass: "card-img-overlay d-flex align-items-end" },
@@ -49657,7 +49657,7 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("a", { attrs: { href: "vid.slug" } }, [
+                _c("a", { attrs: { href: vid.slug } }, [
                   _c("div", { staticClass: "card-img-overlay" }, [
                     _c("p", { staticClass: "card-title d-inline-flex" }, [
                       _vm._v(_vm._s(vid.title))
