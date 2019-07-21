@@ -12,7 +12,12 @@
       </div>
       <div class="col-md-10">
       <h3>Videos</h3>
-
+      <form method="get">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="search" name="search">
+          <button class="btn btn-danger" type="submit">Search</button>
+        </div>
+      </form>
         @foreach($videos->chunk(3) as $chunked_videos)
 
             <div class="card-deck">

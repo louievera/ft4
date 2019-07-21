@@ -20,13 +20,16 @@ class PageController extends Controller
     }
 
     public function indexPost()
-    {
-        //$posts = Post::all();
-        //$posts = Post::simplePaginate(3);
-        //$posts = Post::paginate(3);
-        $posts = Post::orderBy('updated_at','desc')->paginate(15);
-        return view('post.index')->with('posts',$posts);
-        //return view('post',['posts' => $posts]);
+    { 
+      $search = isset($_GET['search']) ? $_GET['search'] : "";
+      $posts = Post::orderBy('updated_at','desc')->paginate(15);
+
+      if($search){
+        $posts = Post::where('author_name','like','%'.$search.'%')
+        ->orwhere('title','like','%'.$search.'%')
+        ->orderBy('updated_at','desc')->paginate(15);
+      }
+      return view('post.index')->with('posts',$posts);
     }
 
     public function showPost($slug)
@@ -37,7 +40,13 @@ class PageController extends Controller
 
     public function indexVideo()
     {
+      $search = isset($_GET['search']) ? $_GET['search'] : "";
         $videos = Video::orderBy('updated_at','desc')->paginate(15);
+      if($search){
+        $videos = Video::where('title','like','%'.$search.'%')
+        ->orderBy('updated_at','desc')->paginate(15);
+      }
+        
         return view('video.index')->with('videos',$videos);
     }
 
@@ -49,13 +58,21 @@ class PageController extends Controller
 
     public function indexLyric()
     {
+      $search = isset($_GET['search']) ? $_GET['search'] : "";
         $lyrics = Lyric::orderBy('title')->paginate(20);
+        if($search){
+          $lyrics = Lyric::where('title','like','%'.$search.'%')
+          ->orwhere('artist','like','%'.$search.'%')
+          ->orderBy('updated_at','desc')->paginate(15);
+        }
         //$lyrics = Lyric::paginate(20)->orderbyDesc();
         return view('lyric.index')->with('lyrics',$lyrics);
     }
 
     public function showLyric($slug)
     {
+      $search = isset($_GET['search']) ? $_GET['search'] : "";
+
         $lyric = Lyric::where('slug','=',$slug)->firstOrFail();
         return view('lyric.show')->withLyric($lyric);
     }
