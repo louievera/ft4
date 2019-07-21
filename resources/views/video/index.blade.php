@@ -7,7 +7,7 @@
 
 @section('content')
 
-  <!-- <div class="row">
+  <div class="row">
       <div class="col-md-1">
       </div>
       <div class="col-md-10">
@@ -26,20 +26,13 @@
                         </div>
                         </a>
                     </div>
-
             @endforeach
-
             </div>
             <hr>
-
         @endforeach
-
         <p class="bg-dark text-center">{{ $videos->links() }}</p>
-
       </div>
-  </div> -->
-  <videos></videos>
-
+  </div>
 
 
 @endsection

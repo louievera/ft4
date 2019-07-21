@@ -49551,6 +49551,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -49602,34 +49606,30 @@ var render = function() {
         _c(
           "div",
           { staticClass: "card-columns" },
-          [
-            _vm._l(_vm.posts, function(post) {
-              return _c("div", { staticClass: "card bg-inverse" }, [
-                _c("img", {
-                  staticClass: "card-img",
-                  attrs: { src: "/storage/" + post.image }
-                }),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "post.slug" } }, [
-                  _c(
-                    "div",
-                    { staticClass: "card-img-overlay d-flex align-items-end" },
-                    [
-                      _c("p", { staticClass: "card-title" }, [
-                        _vm._v(_vm._s(post.title))
-                      ])
-                    ]
-                  )
-                ])
+          _vm._l(_vm.posts, function(post) {
+            return _c("div", { staticClass: "card bg-inverse" }, [
+              _c("img", {
+                staticClass: "card-img",
+                attrs: { src: "/storage/" + post.image }
+              }),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "post.slug" } }, [
+                _c(
+                  "div",
+                  { staticClass: "card-img-overlay d-flex align-items-end" },
+                  [
+                    _c("p", { staticClass: "card-title" }, [
+                      _vm._v(_vm._s(post.title))
+                    ])
+                  ]
+                )
               ])
-            }),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "/articles" } }, [
-              _vm._v("Check more Articles...")
             ])
-          ],
-          2
+          }),
+          0
         ),
+        _vm._v(" "),
+        _vm._m(0),
         _vm._v(" "),
         _c("hr")
       ])
@@ -49669,9 +49669,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _c("a", { attrs: { href: "/videos" } }, [
-            _vm._v("Check more videos...")
-          ])
+          _vm._m(1)
         ]),
         _vm._v(" "),
         _c("hr")
@@ -49679,7 +49677,26 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "float-right" }, [
+      _c("a", { attrs: { href: "/articles" } }, [
+        _vm._v("Check more Articles...")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "float-right" }, [
+      _c("a", { attrs: { href: "/videos" } }, [_vm._v("Check more videos...")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

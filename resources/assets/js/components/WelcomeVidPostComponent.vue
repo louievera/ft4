@@ -14,6 +14,8 @@
                     </div>
                     </a>
                 </div>
+            </div>
+            <div class="float-right">
                 <a href="/articles">Check more Articles...</a>
             </div>
             <hr>
@@ -36,7 +38,9 @@
                         </a>
                     </div>
                 </div>
-                <a href="/videos">Check more videos...</a>
+                <div class="float-right">
+                    <a href="/videos">Check more videos...</a>
+                </div>
             </div>    
             <hr>
         </div>
