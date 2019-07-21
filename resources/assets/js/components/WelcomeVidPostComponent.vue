@@ -8,7 +8,7 @@
             <div class="card-columns">            
                 <div class="card bg-inverse" v-for="post in posts">
                     <img class="card-img" :src="'/storage/'+post.image">
-                    <a :href="post.slug">
+                    <a :href="'article/'+post.slug">
                     <div class="card-img-overlay d-flex align-items-end">
                         <p class="card-title">{{ post.title }}</p>
                     </div>
@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-4" v-for="vid in vids">
                         <img class="card-img" :src="'https://img.youtube.com/vi/'+vid.embedlink+'/mqdefault.jpg'">
-                        <a :href="vid.slug">
+                        <a :href="'video/'+vid.slug">
                         <div class="card-img-overlay">
                             <p class="card-title d-inline-flex">{{vid.title}}</p>
                         </div>
