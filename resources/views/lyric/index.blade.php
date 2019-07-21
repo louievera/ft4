@@ -19,6 +19,7 @@
 --}}
     <div class="row justify-content-md-center">
   		<div class="col-md-8">
+		  <h3>Lyrics</h3>
   			<div class="list-group">
   					@foreach ($lyrics->sortBy('title') as $lyric)
   							<a href="{{ route('lyric_read', $lyric->slug) }}" class="list-group-item list-group-item-dark list-group-item-action">{{ $lyric->title.' - '.$lyric->artist }}</a>

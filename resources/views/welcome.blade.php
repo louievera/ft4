@@ -83,6 +83,9 @@
 
                       </div>
                       <hr>
+                      <div class="float-right">
+                        <a href="/articles">Check more articles..</a>
+                      </div>
                 </div>
             </div>
             <div class="row">
@@ -108,7 +111,9 @@
                       </div>
                       <hr>
                   @endforeach
-
+                  <div class="float-right">
+                        <a href="/videos">Check more videos..</a>
+                      </div>
                 </div>
             </div>
 @endsection

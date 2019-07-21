@@ -11,7 +11,7 @@
       <div class="col-md-1">
       </div>
       <div class="col-md-10">
-
+        <h3>Articles</h3>
             <div class="card-columns">
             @foreach($posts as $individual_post)
                 @if($individual_post->status == 'PUBLISHED')

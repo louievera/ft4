@@ -11,6 +11,7 @@
       <div class="col-md-1">
       </div>
       <div class="col-md-10">
+      <h3>Videos</h3>
 
         @foreach($videos->chunk(3) as $chunked_videos)
 

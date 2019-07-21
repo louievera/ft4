@@ -13,8 +13,8 @@ class PageController extends Controller
 {
     public function getIndex() {
         //$posts = Post::all();
-        $posts = Post::where('featured',1)->orderBy('updated_at','desc')->get();
-        $videos = Video::where('featured',1)->orderBy('updated_at','desc')->get();
+        $posts = Post::where('featured',1)->orderBy('updated_at','desc')->limit(6)->get();
+        $videos = Video::where('featured',1)->orderBy('updated_at','desc')->limit(6)->get();
         return view('welcome')->with('posts',$posts)->with('videos',$videos);
         //return view('welcome')->with('posts',$posts);
     }
