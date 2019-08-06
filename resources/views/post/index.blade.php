@@ -33,7 +33,7 @@
             @endforeach
             </div>
             <hr>
-            <p class="text-right">{{ $posts->links()   }}</p>
+            <p class="text-right">{{ $posts->appends(request()->except('page'))->links()   }}</p>
 
       </div>
   </div>

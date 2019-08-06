@@ -40,7 +40,7 @@
 
         @endforeach
 
-        <p class="bg-dark text-center">{{ $videos->links() }}</p>
+        <p class="bg-dark text-center">{{ $videos->appends(request()->except('page'))->links() }}</p>
 
       </div>
   </div>

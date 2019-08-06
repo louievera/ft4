@@ -37,7 +37,7 @@
     <div class="row justify-content-md-center">
   		<div class="col-md-8">
   			<div class="list-group">
-            <p class="text-center">{{ $lyrics->links() }}</p>
+            <p class="text-center">{{ $lyrics->appends(request()->except('page'))->links() }}</p>
         </div>
     	</div>
     </div>
