@@ -25,17 +25,14 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/', 'PageController@getIndex')->name('welcome');
 Route::get('/articles','PageController@indexPost')->name('article_browse');
 Route::get('/article/{slug}','PageController@showPost')->name('article_read');
-Route::get('/videos','PageController@indexVideo')->name('video_browse');
+Route::get('/search','PageController@searchResult');
+Route::get('/videos','PageController@indexVideo');
+
 Route::get('/video/{slug}','PageController@showVideo')->name('video_read');
 Route::get('/lyrics','PageController@indexLyric')->name('lyric_browse');
 Route::get('/lyric/{slug}','PageController@showLyric')->name('lyric_read');
 
 Route::get('/{slug}','PageController@showPage')->name('page_read');
-Route::get('/searchRes','PageController@searchResult');
-
-Route::get('/test',function(){ 
-    return 'testing'; 
-})->name('test');
 
 
 /*

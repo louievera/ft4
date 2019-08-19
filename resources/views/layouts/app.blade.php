@@ -61,6 +61,7 @@
               <li class="nav-item">
                 <a class="nav-link" target="blank" href="/fliptop_radio_station1"><strong>Radio</strong></a>
               </li>
+              
               @guest
                   <li><a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user"></i> {{ __('Sign Up') }}</strong></a></li>
                   <li><a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> {{ __('Login') }}</strong></a></li>
@@ -83,6 +84,15 @@
                       </div>
                   </li>
               @endguest
+              <li>             
+                <form action="./search" method="get">
+                  <input class="form-control-sm input-sm" type="text" placeholder="Search" name="q" size="8">
+                    <button type="submit" class="btn btn-danger btn-sm">
+                    <i class="fas fa-search"></i></strong></a></li>
+                  </button>
+                </form>
+              
+              </li>
 
             </ul>
           </div>
