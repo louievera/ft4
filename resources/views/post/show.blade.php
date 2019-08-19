@@ -44,7 +44,9 @@
             --}}
             {!! $post->body !!}
             
-            <div class="fb-share-button" data-href="http://localhost:666/article/behind-the-sound-kmg" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F{{request()->getHttpHost()}}%2Farticle%2F{{$post->slug}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>    
+            <div class="fb-share-button" data-href="https://www.fliptop.com.ph/article/{{$post->slug}}" 
+            data-layout="button" data-size="large"><a target="_blank" 
+            href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhttps://www.fliptop.com.ph%2Farticle%2F{{$post->slug}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>    
             <hr>
             <a href="{{ url()->previous() }}"><p class="text-center"><i class="fas fa-step-backward"></i> Back</p></a>
             <hr>
