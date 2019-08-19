@@ -23,7 +23,7 @@
 			<div class="">	  
 				<form method="get">
 					<h3>Lyrics</h3>
-					<div class="input-group mb-1 col-4">							
+					<div class="input-group mb-1">							
 						<input type="text" class="form-control form-control-sm mr-1" placeholder="search" name="search">
 						<button class="btn btn-sm btn-danger" type="submit">Search</button>						
 					</div>

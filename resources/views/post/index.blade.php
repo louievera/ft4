@@ -13,8 +13,8 @@
       <div class="col-md-10">
         <h3>Articles</h3>
         <form method="get">
-            <div class="input-group">
-            <input type="text" class="form-control" placeholder="search" name="search">
+            <div class="input-group mb-1">
+            <input type="text" class="form-control mr-1" placeholder="search" name="search">
             <button class="btn btn-danger" type="submit">Search</button>
             </div>
         </form>
