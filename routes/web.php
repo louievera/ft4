@@ -31,6 +31,12 @@ Route::get('/lyrics','PageController@indexLyric')->name('lyric_browse');
 Route::get('/lyric/{slug}','PageController@showLyric')->name('lyric_read');
 
 Route::get('/{slug}','PageController@showPage')->name('page_read');
+Route::get('/searchRes','PageController@searchResult');
+
+Route::get('/test',function(){ 
+    return 'testing'; 
+})->name('test');
+
 
 /*
 Route::get('/promos', 'PageController@getPromos')->name('promos');

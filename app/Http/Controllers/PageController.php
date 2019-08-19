@@ -101,4 +101,23 @@ class PageController extends Controller
 
     }
 
+    public function searchResult(){
+      // $search = $_GET['q'];
+      $search = 'emcee';
+      $posts = Post::where('author_name','like','%'.$search.'%')
+                      ->orwhere('title','like','%'.$search.'%')
+                      ->orwhere('body','like','%'.$search.'%')
+                      ->orderBy('updated_at','desc')->paginate(15);
+
+      $lyrics = Lyric::where('title','like','%'.$search.'%')
+                      ->orwhere('artist','like','%'.$search.'%')
+                      ->orderBy('updated_at','desc')->paginate(15);
+      
+      $videos = Video::where('title','like','%'.$search.'%')
+                      ->orderBy('updated_at','desc')->paginate(15);
+      
+      // return view('search')->with('posts',$posts)->with('videos',$videos)->with('lyrics',$lyrics);
+      return 'search test';
+
+    }
 }
