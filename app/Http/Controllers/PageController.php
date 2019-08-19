@@ -27,6 +27,7 @@ class PageController extends Controller
       if($search){
         $posts = Post::where('author_name','like','%'.$search.'%')
         ->orwhere('title','like','%'.$search.'%')
+        ->orwhere('body','like','%'.$search.'%')
         ->orderBy('updated_at','desc')->paginate(15);
       }
       return view('post.index')->with('posts',$posts);

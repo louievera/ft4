@@ -8,7 +8,7 @@
 @endsection
 
 @section('highlight')
-            <div class="content col-10 offset-1">              
+            <div class="content col-10 offset-1">
                 <div id="ftcarousel" class="carousel slide border border-white" data-ride="carousel" data-pause="hover">
                   <ol class="carousel-indicators">
                     <li data-target="#ftcarousel" data-slide-to="0" class="active"></li>
@@ -65,6 +65,7 @@
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-10">
+                <h3>Featured Articles:</h3>
                       <div class="card-columns">
                       @foreach($posts as $individual_post)
                           @if($individual_post->status == 'PUBLISHED')

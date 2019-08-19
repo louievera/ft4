@@ -43,7 +43,8 @@
             <h5><p>Updated on {{ $post->updated_at->format('F d, Y') }}</p></h5>
             --}}
             {!! $post->body !!}
-
+            
+            <div class="fb-share-button" data-href="http://localhost:666/article/behind-the-sound-kmg" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F{{request()->getHttpHost()}}%2Farticle%2F{{$post->slug}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>    
             <hr>
             <a href="{{ url()->previous() }}"><p class="text-center"><i class="fas fa-step-backward"></i> Back</p></a>
             <hr>
@@ -51,3 +52,6 @@
     </div>
 
 @endsection
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
