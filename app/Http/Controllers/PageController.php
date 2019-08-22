@@ -102,7 +102,16 @@ class PageController extends Controller
     }
 
     public function searchResult(){
-      $search = isset($_GET['q']) ? $_GET['q'] : 'none';
+      $search = !empty($_GET['q']) ? $_GET['q'] : '';
+      
+
+      if($search == '')
+      {
+        return view('search')
+                ->with('posts','')
+                ->with('videos','')
+                ->with('lyrics','');
+      }
       
       $posts = Post::where('author_name','like','%'.$search.'%')
                       ->orwhere('title','like','%'.$search.'%')
@@ -116,6 +125,9 @@ class PageController extends Controller
       $videos = Video::where('title','like','%'.$search.'%')
                       ->orderBy('updated_at','desc')->get();
       
-      return view('search')->with('posts',$posts)->with('videos',$videos)->with('lyrics',$lyrics);
+      return view('search')
+              ->with('posts',$posts)
+              ->with('videos',$videos)
+              ->with('lyrics',$lyrics);
     }
 }
