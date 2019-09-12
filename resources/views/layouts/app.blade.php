@@ -86,7 +86,7 @@
               @endguest
               <li>             
                 <form action="./search" method="get">
-                  <input class="form-control-sm input-sm" type="text" placeholder="Search" name="q" size="8">
+                  <input class="form-control-sm input-xs" type="text" placeholder="Search" name="q" size="8">
                     <button type="submit" class="btn btn-danger btn-sm">
                     <i class="fas fa-search"></i></strong></a></li>
                   </button>

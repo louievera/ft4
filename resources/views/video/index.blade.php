@@ -11,13 +11,19 @@
       <div class="col-md-1">
       </div>
       <div class="col-md-10">
-      <h3>Videos</h3>
-      <form method="get">
-        <div class="input-group mb-1">
-          <input type="text" class="form-control mr-1" placeholder="search" name="search">
-          <button class="btn btn-danger" type="submit">Search</button>
+      <div class='row'>
+        <div class='col-xs-3 mr-2'>
+          <h3>Videos</h3>
         </div>
-      </form>
+        <div class='card bg-inrverse'>
+          <form method="get">
+            <div class="input-group mb-1">
+              <input type="text" class="form-control mr-1" placeholder="search" name="search">
+              <button class="btn btn-danger" type="submit">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
         @foreach($videos->chunk(3) as $chunked_videos)
 
             <div class="card-deck">
