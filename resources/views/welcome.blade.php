@@ -11,27 +11,27 @@
             <div class="content col-10 offset-1">
                 <div id="ftcarousel" class="carousel slide border border-white" data-ride="carousel" data-pause="hover">
                   <ol class="carousel-indicators">
-                  <!-- @foreach($images as $image)
+                  @foreach($images as $image)
                     <li data-target="#ftcarousel" data-slide-to="{{$loop->count}}" @if($loop->first) class="active" @endif ></li>
                     
-                  @endforeach -->
-                    <li data-target="#ftcarousel" data-slide-to="0" class="active"></li>
+                  @endforeach
+                    <!-- <li data-target="#ftcarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#ftcarousel" data-slide-to="1"></li>
                     <li data-target="#ftcarousel" data-slide-to="2"></li>
                     <li data-target="#ftcarousel" data-slide-to="3"></li>
                     <li data-target="#ftcarousel" data-slide-to="4"></li>
                     <li data-target="#ftcarousel" data-slide-to="5"></li>
                     <li data-target="#ftcarousel" data-slide-to="6"></li>
-                    <li data-target="#ftcarousel" data-slide-to="7"></li>
+                    <li data-target="#ftcarousel" data-slide-to="7"></li> -->
                   </ol>
                   <div class="carousel-inner">
-                  <!-- @foreach($images as $image)
+                  @foreach($images as $image)
                     <div @if($loop->first) class="carousel-item active" @else class="carousel-item" @endif >
-                      <a href="{{ $image->link }}"><img class="d-block w-100" src="{{ asset('storage'.($image->image)) }}"></a>
+                      <a href="{{ $image->link }}"><img class="d-block w-100" src="{{ asset('/storage/'.($image->image)) }}"></a>
                     </div>
-                  @endforeach -->
+                  @endforeach
                     
-                    <div class="carousel-item active">
+                    <!-- <div class="carousel-item active">
                       <a href="/promos"><img class="d-block w-100" src="{{ asset('images/carousel/Unibersikulo6c.jpg') }}"></a>
                     </div>
                     <div class="carousel-item">
@@ -54,7 +54,7 @@
                     </div>
                     <div class="carousel-item">
                       <a href="https://www.redbull.tv/film/AP-1TE4PK9292111/mark-grist-battles-the-world" target="_blank"><img class="d-block w-100" src="{{ asset('images/carousel/mg_redbull.jpg') }}"></a>
-                    </div>                  
+                    </div>                   -->
                 </div>
                 <a class="carousel-control-prev" href="#ftcarousel" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
