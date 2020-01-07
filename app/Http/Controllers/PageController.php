@@ -6,17 +6,17 @@ use App\Post;
 use App\Video;
 use App\Lyric;
 use App\Page;
+use App\Carouselimage;
 use Illuminate\Http\Request;
 
 
 class PageController extends Controller
 {
     public function getIndex() {
-        //$posts = Post::all();
         $posts = Post::where('featured',1)->orderBy('updated_at','desc')->limit(6)->get();
         $videos = Video::where('featured',1)->orderBy('updated_at','desc')->limit(6)->get();
-        return view('welcome')->with('posts',$posts)->with('videos',$videos);
-        //return view('welcome')->with('posts',$posts);
+        $images = Carouselimage::orderBy('created_at','desc')->limit(8)->get();
+        return view('welcome')->with('posts',$posts)->with('videos',$videos)->with('images',$images);
     }
 
     public function indexPost()
