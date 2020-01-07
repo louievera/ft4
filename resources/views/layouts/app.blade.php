@@ -84,7 +84,7 @@
                       </div>
                   </li>
               @endguest
-              <li>             
+              <!-- <li>             
                 <form action="./search" method="get">
                   <input class="form-control-sm input-xs" type="text" placeholder="Search" name="q" size="8">
                     <button type="submit" class="btn btn-danger btn-sm">
@@ -92,7 +92,7 @@
                   </button>
                 </form>
               
-              </li>
+              </li> -->
 
             </ul>
           </div>
